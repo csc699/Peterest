@@ -1,7 +1,7 @@
 Unit 8: Group Milestone
 ===
 
-# APP_NAME_HERE
+# PETEREST
 
 ## Table of Contents
 1. [Overview](#Overview)
