@@ -17,7 +17,7 @@ Posting photos of an individual's pets and share them with others. Could be used
 - **Category:** Share Pet Photos / Social Networking
 - **Mobile:** This app would be primarily developed for mobile.
 - **Story:** Analyzes user profile, and connects them to other users with similar profile information. The user can then befriend them if wanted.
-- **Market:** Any individual could choose to use this app, and to keep it a safe environment.
+- **Market:** Any individual could choose to use this app, and are Pet lovers and owners.
 - **Habit:** This app could be used as often or unoften as the user wanted depending on how much they want to share.
 - **Scope:** First we would start with pairing people based on similar pet interests, then perhaps evolve into a social media application similar to Facebook. Large potential to use with Pinterest.
 
@@ -27,13 +27,18 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* [Sign up, login]
+* [Main page with posts]
+* [Click on a picture to see comments]
+* [Submit a comment]
+* [Profile page, user can edit name, password, and email information]
+* [Friend list]
+* [Search for friend to add]
+
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* [message a friend]
 
 ### 2. Screen Archetypes
 
@@ -66,5 +71,6 @@ Posting photos of an individual's pets and share them with others. Could be used
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### [BONUS] Interactive Prototype
