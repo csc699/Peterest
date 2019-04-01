@@ -80,7 +80,10 @@ Optional:
 <img src="http://i67.tinypic.com/52gy6r.jpg" width=600 />
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="http://i64.tinypic.com/9th85z.png" width=200 /> <img src="http://i68.tinypic.com/29pb7ds.png" width=200 /> <img src="http://i64.tinypic.com/2yzgzeo.png" width=200 /> <img src="http://i67.tinypic.com/sczugw.png" width=200 />
+<img src="https://i.imgur.com/ZYfZZr9.png" width=600>
+<img src="https://i.imgur.com/QYaixZU.png" width=600>
+<img src="https://i.imgur.com/m2QqyPk.png" width=600>
+<img src="https://i.imgur.com/HXfUOLJ.png" width=600>
 
 ### [BONUS] Interactive Prototype
 <img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width=300 alt='Video Walkthrough' />
