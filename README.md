@@ -71,6 +71,6 @@ Posting photos of an individual's pets and share them with others. Could be used
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### [BONUS] Interactive Prototype
+<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
