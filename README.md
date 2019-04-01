@@ -68,7 +68,7 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://www.dropbox.com/s/wox9rvsx6032q3q/CSC699%20-%20Peterest%20WF.jpeg?dl=0" width='' />
+<img src="http://i67.tinypic.com/52gy6r.jpg" width='' />
 
 ### [BONUS] Digital Wireframes & Mockups
 
