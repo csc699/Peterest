@@ -77,10 +77,10 @@ Optional:
 * Friends -> Search for friends or view friend profile
 
 ## Wireframes
-<img src="http://i67.tinypic.com/52gy6r.jpg" width='' />
+<img src="http://i67.tinypic.com/52gy6r.jpg" width=300 />
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="http://i64.tinypic.com/9th85z.png" width=150 /> <img src="http://i68.tinypic.com/29pb7ds.png" width=300 /> <img src="http://i64.tinypic.com/2yzgzeo.png" width=300 /> <img src="http://i67.tinypic.com/sczugw.png" width=300 />
+<img src="http://i64.tinypic.com/9th85z.png" width=150 /> <img src="http://i68.tinypic.com/29pb7ds.png" width=150 /> <img src="http://i64.tinypic.com/2yzgzeo.png" width=150 /> <img src="http://i67.tinypic.com/sczugw.png" width=150 />
 
 ### [BONUS] Interactive Prototype
-<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width=200 alt='Video Walkthrough' />
