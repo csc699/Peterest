@@ -68,7 +68,7 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://previews.dropbox.com/p/thumb/AAbvt-_eH3bjCgeSHSAvkyQSIt5-sdklbeOgvHaZx3ggEcAlk9XVa_rkFE-ttt-xcL1UhOfG9wmh4PwT6JXVYWhMk02HYQ2U4dQrHNbSpVHRk-B8TNkaB-177SOUzZTsJ-bqFD2emW6LMdIkQK16DjS5lLcH7zHbdhxwUvei-4KxJPsfEgxo994DFLvih0pBp0VrZ4htDd6OEzs10XpmT6HbLbULhUvau_76c1y-1XE-exLh-zcyI34DfDTMPoOqB_w2f7z0iVlGsHXR1Dux-I5B0tM5y2AFIKFWIheZwLGFtRgzGIXsOAxMY_XqGDXU9b2ypCNla6hLXKWvg8LpU7n1/p.jpeg?size_mode=5" width=600 />
+<img src="https://previews.dropbox.com/p/thumb/AAbHtom9Ex4is0ZeFu99nboeJ3swjo17crzjht3DQQorUeeIMK4CHHbQ_SfKHgkSJb5lc8Ap4xIj-tFlQpAEXP0E-RbE46-cHrG8D-jrNuu-TC6aJ0x76tIknRPZmGN3u2iZc9I4F1TDNU7gAYokZWMa8lOQYEXNBb2lxZat2IgSNOACi-nHuy5H4m8ibtwRSZ-xPFTrQ4lQbiQK84INiHgxt-bbjCplaPnQcd4HthbvLMZi1rW6G4mQXYXrhuTne9yLFYIMJvRMCoVHl8asm7fWvQbRRDTlyGy9QcrPOWIB_OC5vDH78rGJTImdBe4EsqO-Lp5WOicBBR-N5druRcO8/p.jpeg?size_mode=5" width=600 />
 
 ### [BONUS] Digital Wireframes & Mockups
 
