@@ -68,9 +68,9 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://www.dropbox.com/home/SFSU%20Stuff?preview=CSC699+-+Peterest+WF.jpeg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
-<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width=600'' alt='Video Walkthrough' />
