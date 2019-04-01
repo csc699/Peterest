@@ -45,7 +45,7 @@ Posting photos of an individual's pets and share them with others. Could be used
 ### 2. Screen Archetypes
 
 * Login
-* Reister - User signs up or logs into their account
+* Register - User signs up or logs into their account
   * Upon downloading of the application, the user is prompted to sign up or log in to gain access.
   * Upon reopening of the application, the user stays logged in.
 * Profile Screen
