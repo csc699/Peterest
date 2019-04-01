@@ -39,32 +39,42 @@ Posting photos of an individual's pets and share them with others. Could be used
 **Optional Nice-to-have Stories**
 
 * [message a friend]
+* [post videos]
+* [settings]
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+* Reister - User signs up or logs into their account
+  * Upon downloading of the application, the user is prompted to sign up or log in to gain access.
+  * Upon reopening of the application, the user stays logged in.
+* Profile Screen
+  * Allows user to upload a photo and fill/edit in information.
+* Post Screen
+  * Allows user to view photos that other users have upload.
+  * Allows user to see comment when photo is click and add comment.
+* Friend Screen
+  * Allows user to add friends and view their profile.
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Post Screen
+* Profile
+* Friends
+
+Optional:
+* Message
+* Video
+* Settings
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Forced Log-in -> Account creation if no log in is available
+* Posts View -> Jumps to detail view of photo and comments once the post is clicked
+* Profile -> Text field to modifiy
+* Friends -> Search for friends or view friend profile
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
