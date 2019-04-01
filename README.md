@@ -68,9 +68,9 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src='https://www.dropbox.com/home/SFSU%20Stuff?preview=CSC699+-+Peterest+WF.jpeg' width=600 />
+<img src='https://previews.dropbox.com/p/thumb/AAbvt-_eH3bjCgeSHSAvkyQSIt5-sdklbeOgvHaZx3ggEcAlk9XVa_rkFE-ttt-xcL1UhOfG9wmh4PwT6JXVYWhMk02HYQ2U4dQrHNbSpVHRk-B8TNkaB-177SOUzZTsJ-bqFD2emW6LMdIkQK16DjS5lLcH7zHbdhxwUvei-4KxJPsfEgxo994DFLvih0pBp0VrZ4htDd6OEzs10XpmT6HbLbULhUvau_76c1y-1XE-exLh-zcyI34DfDTMPoOqB_w2f7z0iVlGsHXR1Dux-I5B0tM5y2AFIKFWIheZwLGFtRgzGIXsOAxMY_XqGDXU9b2ypCNla6hLXKWvg8LpU7n1/p.jpeg?size_mode=5' width=600 />
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
-<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width=600 alt='Video Walkthrough' />
+<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
