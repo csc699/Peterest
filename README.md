@@ -73,4 +73,4 @@ Posting photos of an individual's pets and share them with others. Could be used
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
-<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width=600 alt='Video Walkthrough' />
