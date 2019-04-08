@@ -95,6 +95,7 @@ Optional:
 
 **Post**
 | Property | Type            | Description                                 |
+|----------|-----------------|---------------------------------------------|
 | objectId | String          | unique id for the user post (default field) |
 | author   | Pointer to User | image author                                |
 | image    | File            | image that user posts                       |
