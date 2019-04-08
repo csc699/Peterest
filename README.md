@@ -121,6 +121,7 @@ Optional:
 **Network request Action**
 
 | CRUD | HTTP Verb | Example |
+| --- | --- | --- |
 | Create | POST | Creating a new post |
 | Read | GET | Fetching posts for a user's feed |
 | Update | PUT | Changing a user's profile image |
