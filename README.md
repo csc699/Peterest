@@ -94,7 +94,7 @@ Optional:
 ### Models
 
 **Post**
-| Property | Type | Description |
+ | Property | Type | Description |
 | --- | --- | --- |
 | objectId | String | unique id for the user post (default field) |
 | author | Pointer to User | image author |
