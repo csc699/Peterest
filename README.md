@@ -94,31 +94,32 @@ Optional:
 ### Models
 
 **Post**
-| Property | Type            | Description                                 |
-|----------|-----------------|---------------------------------------------|
-| objectId | String          | unique id for the user post (default field) |
-| author   | Pointer to User | image author                                |
-| image    | File            | image that user posts                       |
-| caption  | String          | image caption by author                     |
+| Property | Type | Description |
+| --- | --- | --- |
+| objectId | String | unique id for the user post (default field) |
+| author | Pointer to User | image author |
+| image | File | image that user posts |
+| caption | String | image caption by author |
 
 **Profile**
-| Property | Type            | Description            |
-| objectId | String          | unique id for the user |
-| author   | Pointer to User | user profile name      |
-| image    | File            | user profile image     |
+| Property | Type | Description |
+| --- | --- | --- |
+| objectId | String | unique id for the user |
+| author | Pointer to User | user profile name |
+| image | File | user profile image |
 
 **Friends**
-| Property | Type   | Description            |
+| Property | Type | Description |
 | objectId | String | unique id for the user |
 
 ### Networking
 
 **Network request Action**
-| CRUD   | HTTP Verb | Example                          |
-| Create | POST      | Creating a new post              |
-| Read   | GET       | Fetching posts for a user's feed |
-| Update | PUT       | Changing a user's profile image  |
-| Delete | DELETE    | Deleting a comment               |
+| CRUD | HTTP Verb | Example |
+| Create | POST | Creating a new post |
+| Read | GET | Fetching posts for a user's feed |
+| Update | PUT | Changing a user's profile image |
+| Delete | DELETE | Deleting a comment |
 
 **Network Request Outline**
 
@@ -143,6 +144,7 @@ Optional:
 | Query object and delete                | Deleting a comment               |
 
 **Parse Query Code Snippet**
+```swift
 // iOS
 // (Read/GET) Query all posts recently updated
 let query = PFQuery(className: "Post")
@@ -154,3 +156,4 @@ query.findObjectsInBackground { (posts, error) in
     	self.tableView.reloadData()
     }
 }
+```
