@@ -119,6 +119,7 @@ Optional:
 ### Networking
 
 **Network request Action**
+
 | CRUD | HTTP Verb | Example |
 | Create | POST | Creating a new post |
 | Read | GET | Fetching posts for a user's feed |
