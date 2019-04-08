@@ -7,6 +7,7 @@ Unit 8: Group Milestone
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
+1. [Schema] (#Schema)
 
 ## Overview
 ### Description
@@ -87,3 +88,68 @@ Optional:
 
 ### [BONUS] Interactive Prototype
 <img src='http://g.recordit.co/dqSu5Vuuei.gif' title='Video Walkthrough' width=300 alt='Video Walkthrough' />
+
+## Schema
+
+### Models
+
+**Post**
+| Property | Type            | Description                                 |
+| objectId | String          | unique id for the user post (default field) |
+| author   | Pointer to User | image author                                |
+| image    | File            | image that user posts                       |
+| caption  | String          | image caption by author                     |
+
+**Profile**
+| Property | Type            | Description            |
+| objectId | String          | unique id for the user |
+| author   | Pointer to User | user profile name      |
+| image    | File            | user profile image     |
+
+**Friends**
+| Property | Type   | Description            |
+| objectId | String | unique id for the user |
+
+### Networking
+
+**Network request Action**
+| CRUD   | HTTP Verb | Example                          |
+| Create | POST      | Creating a new post              |
+| Read   | GET       | Fetching posts for a user's feed |
+| Update | PUT       | Changing a user's profile image  |
+| Delete | DELETE    | Deleting a comment               |
+
+**Network Request Outline**
+
+* Home Feed Screen
+	* (Read/GET) Query all posts recently updated
+	* (Delete) Delete existing like
+	* (Create/POST) Create a new comment on a post
+	* (Delete) Delete existing comment
+* Create Post Screen
+	* (Create/POST) Create a new post object
+* Profile Screen
+	* (Read/GET) Query logged in user object
+	* (Update/PUT) Update user profile image
+* Friend Search Screen
+	* (Read/GET) Query all user by name search
+
+**Parse Networking Methods**
+| Parse Method                           | Example                          |
+| Create and save objects                | Creating a new post              |
+| Query objects and set conditions       | Fetching posts for a user's feed |
+| Query object, update properties & save | Changing a user's profile image  |
+| Query object and delete                | Deleting a comment               |
+
+**Parse Query Code Snippet**
+// iOS
+// (Read/GET) Query all posts recently updated
+let query = PFQuery(className: "Post")
+query.includeKey(["author"])
+query.limit = 20
+query.findObjectsInBackground { (posts, error) in
+    if posts != nil {
+    	self.posts = posts!
+    	self.tableView.reloadData()
+    }
+}
