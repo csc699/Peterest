@@ -103,6 +103,7 @@ Optional:
 | caption | String | image caption by author |
 
 **Profile**
+
 | Property | Type | Description |
 | --- | --- | --- |
 | objectId | String | unique id for the user |
@@ -110,7 +111,9 @@ Optional:
 | image | File | user profile image |
 
 **Friends**
+
 | Property | Type | Description |
+| --- | --- | --- |
 | objectId | String | unique id for the user |
 
 ### Networking
@@ -138,7 +141,9 @@ Optional:
 	* (Read/GET) Query all user by name search
 
 **Parse Networking Methods**
+
 | Parse Method                           | Example                          |
+| --- | --- |
 | Create and save objects                | Creating a new post              |
 | Query objects and set conditions       | Fetching posts for a user's feed |
 | Query object, update properties & save | Changing a user's profile image  |
