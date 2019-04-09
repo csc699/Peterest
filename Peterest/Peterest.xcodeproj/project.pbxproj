@@ -10,6 +10,10 @@
 		4C68C9D4E694B43F57D023F2 /* Pods_Peterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32211E8BE11966F879743F03 /* Pods_Peterest.framework */; };
 		532405647F4E97A2454D5FB6 /* Pods_PeterestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEDC0E2CB11E707D91543DA /* Pods_PeterestUITests.framework */; };
 		66C7CB5E751529AF63E13A62 /* Pods_PeterestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256171C02AB1A616C79F5682 /* Pods_PeterestTests.framework */; };
+		CC336F6F225C47DE006C63C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336F6E225C47DE006C63C7 /* LoginViewController.swift */; };
+		CC336F71225C47EB006C63C7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336F70225C47EB006C63C7 /* FeedViewController.swift */; };
+		CC336F73225C47F8006C63C7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336F72225C47F8006C63C7 /* ProfileViewController.swift */; };
+		CC336F75225C4808006C63C7 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336F74225C4808006C63C7 /* FriendsViewController.swift */; };
 		CC88196D225C37C4003038ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88196C225C37C4003038ED /* AppDelegate.swift */; };
 		CC88196F225C37C4003038ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88196E225C37C4003038ED /* ViewController.swift */; };
 		CC881972225C37C4003038ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC881970225C37C4003038ED /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		3AEDC0E2CB11E707D91543DA /* Pods_PeterestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeterestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B845ADD88F675CC8CB6B953 /* Pods-PeterestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeterestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeterestUITests/Pods-PeterestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA4F49E5C35F98CD158A0F79 /* Pods-PeterestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeterestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeterestTests/Pods-PeterestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC336F6E225C47DE006C63C7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC336F70225C47EB006C63C7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		CC336F72225C47F8006C63C7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CC336F74225C4808006C63C7 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CC881969225C37C4003038ED /* Peterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC88196C225C37C4003038ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC88196E225C37C4003038ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +128,10 @@
 				CC881973225C37C7003038ED /* Assets.xcassets */,
 				CC881975225C37C7003038ED /* LaunchScreen.storyboard */,
 				CC881978225C37C7003038ED /* Info.plist */,
+				CC336F6E225C47DE006C63C7 /* LoginViewController.swift */,
+				CC336F70225C47EB006C63C7 /* FeedViewController.swift */,
+				CC336F72225C47F8006C63C7 /* ProfileViewController.swift */,
+				CC336F74225C4808006C63C7 /* FriendsViewController.swift */,
 			);
 			path = Peterest;
 			sourceTree = "<group>";
@@ -397,7 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC336F6F225C47DE006C63C7 /* LoginViewController.swift in Sources */,
 				CC88196F225C37C4003038ED /* ViewController.swift in Sources */,
+				CC336F73225C47F8006C63C7 /* ProfileViewController.swift in Sources */,
+				CC336F71225C47EB006C63C7 /* FeedViewController.swift in Sources */,
+				CC336F75225C4808006C63C7 /* FriendsViewController.swift in Sources */,
 				CC88196D225C37C4003038ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
