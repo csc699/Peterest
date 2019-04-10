@@ -7,7 +7,25 @@
 		<key>Peterest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CC881968225C37C4003038ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC88197C225C37C8003038ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC881987225C37C8003038ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
