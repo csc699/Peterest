@@ -332,7 +332,7 @@
         <scene sceneID="OQt-fB-Tuo">
             <objects>
                 <viewControllerPlaceholder storyboardName="Feed" id="vVM-w4-YPZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ssS-Mz-VXy"/>
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="ssS-Mz-VXy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfo-3Z-Oq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,7 +342,7 @@
         <scene sceneID="KCV-RM-oW6">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="Sxw-t0-Z5g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ua7-lP-xuc"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile-account" id="ua7-lP-xuc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rw-Dr-SEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -352,7 +352,7 @@
         <scene sceneID="teO-bG-ivY">
             <objects>
                 <viewControllerPlaceholder storyboardName="Friends" id="lgb-Zm-TpI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="85l-x7-WFR"/>
+                    <tabBarItem key="tabBarItem" title="" image="friendslist" id="85l-x7-WFR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9y-sz-GKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -361,8 +361,11 @@
     </scenes>
     <resources>
         <image name="email" width="36" height="36"/>
+        <image name="feed" width="37.5" height="37.5"/>
+        <image name="friendslist" width="37.5" height="37.5"/>
         <image name="fullname" width="75" height="75"/>
         <image name="password" width="39" height="39"/>
+        <image name="profile-account" width="37.5" height="37.5"/>
         <image name="username" width="75" height="75"/>
     </resources>
 </document>
