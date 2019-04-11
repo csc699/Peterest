@@ -62,7 +62,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eKV-I4-qH2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lZi-kc-TKX"/>
+                    <navigationItem key="navigationItem" id="lZi-kc-TKX">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="J4y-93-nus"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojc-oV-beK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,11 +140,11 @@
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="760.71428571428567"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="h6O-P8-fUS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TNp-9J-Qnd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="3sk-KW-eYU"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile-account" id="3sk-KW-eYU"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bYf-m4-oPS">
@@ -159,6 +161,9 @@
             <point key="canvasLocation" x="899" y="761"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile-account" width="37.5" height="37.5"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fWu-Tw-dqu"/>
     </inferredMetricsTieBreakers>
