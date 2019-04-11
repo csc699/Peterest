@@ -52,7 +52,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpS-aC-FRL">
                                 <rect key="frame" x="0.0" y="817" width="414" height="58"/>
@@ -66,7 +66,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Lh-a4-aib" kind="presentation" id="xbA-gg-Bfn"/>
+                                    <segue destination="3Lh-a4-aib" kind="presentation" identifier="registerAccount" id="Yec-rM-z1j"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="i12-4E-1sp">
@@ -87,6 +87,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLogin:" destination="aZ4-ka-ZRD" eventType="touchUpInside" id="aIZ-3b-BwB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,15 +121,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1bK-Ly-uCA"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gQZ-jy-WTS"/>
+                    <connections>
+                        <outlet property="createAccountButton" destination="LpS-aC-FRL" id="hKn-GL-wnF"/>
+                        <outlet property="passwordField" destination="2ZI-Ej-WVA" id="H5j-DJ-8A4"/>
+                        <outlet property="usernameField" destination="2cE-wH-tjm" id="Usg-n8-JSR"/>
+                        <segue destination="KBk-YJ-qtr" kind="presentation" identifier="loginSegue" id="kJp-Jk-XeB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcK-cO-kA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1659.4202898550725" y="821.65178571428567"/>
+            <point key="canvasLocation" x="36" y="822"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="7VT-5M-KK5">
             <objects>
-                <viewController id="3Lh-a4-aib" sceneMemberID="viewController">
+                <viewController id="3Lh-a4-aib" customClass="RegisterViewController" customModule="Peterest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNp-eb-SaB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +195,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7O-4d-tQu">
                                 <rect key="frame" x="0.0" y="816" width="416" height="58"/>
@@ -198,9 +208,6 @@
                                 <state key="normal" title="Back to Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="aZ4-ka-ZRD" kind="presentation" id="mlT-VA-RYX"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="iEo-DD-WCr">
                                 <rect key="frame" x="49" y="534" width="40" height="40"/>
@@ -224,7 +231,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="VPi-uD-zCm">
                                 <rect key="frame" x="48" y="597" width="40" height="40"/>
@@ -251,6 +258,10 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onRegister:" destination="3Lh-a4-aib" eventType="touchUpInside" id="sng-pQ-AJV"/>
+                                    <segue destination="aZ4-ka-ZRD" kind="presentation" identifier="backtoLoginSegue" id="4Md-ZU-deY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,10 +314,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q4C-e2-cfU"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="Mbh-Qv-ia0" id="wig-ve-SKr"/>
+                        <outlet property="emailField" destination="kwZ-XP-prD" id="3ON-9b-FJV"/>
+                        <outlet property="nameField" destination="ywA-t9-9gs" id="X68-gL-86f"/>
+                        <outlet property="passwordField" destination="75Q-UC-oeC" id="E8M-fC-fsC"/>
+                        <outlet property="usernameField" destination="0Q1-6n-qhu" id="XsW-vK-4zo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXe-Xv-mTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1010.144927536232" y="821.65178571428567"/>
+            <point key="canvasLocation" x="784" y="396"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AGa-jT-QeC">
@@ -326,7 +344,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0f-Mv-hBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="822"/>
+            <point key="canvasLocation" x="1549" y="822"/>
         </scene>
         <!--Feed-->
         <scene sceneID="OQt-fB-Tuo">
@@ -336,7 +354,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfo-3Z-Oq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-816" y="1313"/>
+            <point key="canvasLocation" x="916" y="1290"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KCV-RM-oW6">
@@ -346,7 +364,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rw-Dr-SEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="1313"/>
+            <point key="canvasLocation" x="1549" y="1290"/>
         </scene>
         <!--Friends-->
         <scene sceneID="teO-bG-ivY">
@@ -356,7 +374,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9y-sz-GKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-24" y="1316"/>
+            <point key="canvasLocation" x="2170" y="1290"/>
         </scene>
     </scenes>
     <resources>
