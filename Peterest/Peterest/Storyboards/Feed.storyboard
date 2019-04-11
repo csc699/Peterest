@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="1764" y="60"/>
         </scene>
-        <!--Posts-->
+        <!--Navigation Controller-->
         <scene sceneID="8S1-ad-csA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wRL-Lt-fRG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Posts" image="feed" id="Tt1-it-KnN"/>
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="Tt1-it-KnN"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dbg-12-HwN">

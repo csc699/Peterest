@@ -62,9 +62,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eKV-I4-qH2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lZi-kc-TKX">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="J4y-93-nus"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="lZi-kc-TKX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojc-oV-beK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
