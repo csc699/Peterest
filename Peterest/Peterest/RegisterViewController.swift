@@ -11,6 +11,9 @@ import Parse
 
 let user = PFUser()
 
+//global variable for passing in the PFUser
+var sharedUser = user
+
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!

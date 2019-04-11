@@ -18,16 +18,38 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var createAccountButton: UIButton!
     
     @IBAction func onLogin(_ sender: Any) {
-        let username = usernameField.text!
-        let password = passwordField.text!
+            let username = usernameField.text!
+            let password = passwordField.text!
     
-        PFUser.logInWithUsername(inBackground: username, password: password) { (success, error) in
-            if user != nil {
+        PFUser.logInWithUsername(inBackground: username, password: password) { (sharedUser, error) in
+            if sharedUser != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
-                print("Error: \(error?.localizedDescription)")            }
+                print("Error: \(error?.localizedDescription)")
+                self.createAlert(title: "Incorrect login", message: "Try again?")
+
+            }
         }
     }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        //creation of button
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("yes")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("no")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
