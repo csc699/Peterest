@@ -40,7 +40,10 @@ Posting photos of an individual's pets and share them with others. Could be used
 **Optional Nice-to-have Stories**
 
 * [message a friend]
+* [pin posts (paw print)]
+* [like posts + counter]
 * [post videos]
+* [show user posts in profile]
 * [settings]
 
 ### 2. Screen Archetypes
