@@ -29,9 +29,12 @@ class RegisterViewController: UIViewController {
         user["fullname"] = nameField.text
         user.username = usernameField.text
         user.email = emailField.text
-        user.password = passwordField.text
-        user.password = confirmPasswordField.text
         
+        if(passwordField.text == confirmPasswordField.text){
+        user.password = passwordField.text
+        } else {
+            createAlert(title: "Passwords do not match", message: "Try again?")
+        }
         
         user.signUpInBackground() { (success, error) in
             if success {
@@ -40,13 +43,38 @@ class RegisterViewController: UIViewController {
                 print("Error: \(error?.localizedDescription)")
             }
         }
+        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+
+        //creation of button
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("yes")
+        }))
+    
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        print("no")
+        }))
+    
+    self.present(alert, animated: true, completion: nil)
+    
+}
+
     
 
     /*
