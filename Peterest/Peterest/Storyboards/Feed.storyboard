@@ -20,7 +20,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3Bb-gY-tgy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nlX-s8-ANt"/>
+                    <navigationItem key="navigationItem" id="nlX-s8-ANt">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="4pQ-5g-teD">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="s7j-IC-hgq" id="t17-YG-AlH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="camera-upload" id="Dfa-bk-qHq"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nx5-KG-z4q" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +55,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera-upload" width="37.5" height="37.5"/>
         <image name="feed" width="37.5" height="37.5"/>
     </resources>
 </document>

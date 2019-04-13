@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="aCf-Kp-InT">
             <objects>
-                <viewController id="aZ4-ka-ZRD" userLabel="Login View Controller" customClass="LoginViewController" customModule="Peterest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="aZ4-ka-ZRD" userLabel="Login View Controller" customClass="LoginViewController" customModule="Peterest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BaI-dz-Ln6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
