@@ -28,12 +28,12 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 **Required Must-have Stories**
 
-* [Sign up, login]
+* [Sign up, login] [x]
 * [Main page with posts]
 * [Click on a picture to see comments]
 * [Submit a comment]
-* [Profile page, user can edit name, password, and email information]
-* [Friend list]
+* [Profile page, user can edit name, password, and email information] [x]
+* [Friend list] [x]
 * [Search for friend to add]
 
 
