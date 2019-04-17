@@ -7,6 +7,7 @@ target 'Peterest' do
 
   # Pods for Peterest
   pod "Parse"
+  pod "Alamofire"
   pod "AlamofireImage"
 
   target 'PeterestTests' do
