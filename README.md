@@ -29,7 +29,7 @@ Posting photos of an individual's pets and share them with others. Could be used
 **Required Must-have Stories**
 
 - [x] [Sign up, login] 
-- [ ] [Main page with posts]
+- [x] [Main page with posts]
 - [ ] [Click on a picture to see comments]
 - [ ] [Submit a comment]
 - [ ] [Profile page, user can edit name, password, and email information] 
