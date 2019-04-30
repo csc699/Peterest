@@ -7,25 +7,47 @@
 //
 
 import UIKit
+import Parse
 
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var friends = [PFObject]()
+
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let query = PFQuery(className: "User")
+        query.includeKey("username")
+        query.limit = 20
+        
+        query.findObjectsInBackground { (friends, error) in
+            if friends != nil {
+                self.friends = friends!
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return friends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
         
-        cell.textLabel?.text =  "friend: \(indexPath.row)"
+        let friend = friends[indexPath.section]
+
+      let name = friend["username"] as! PFUser
+
+        cell.usernameLabel.text = name.username
+  
+    return cell
         
-        return cell
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +59,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+  
 
     /*
     // MARK: - Navigation
