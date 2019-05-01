@@ -19,11 +19,11 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let query = PFQuery(className: "User")
-        query.includeKey("username")
-        query.limit = 20
+        let query = PFUser.query()
+        query?.includeKey("username")
+        query?.limit = 20
         
-        query.findObjectsInBackground { (friends, error) in
+        query?.findObjectsInBackground { (friends, error) in
             if friends != nil {
                 self.friends = friends!
                 self.tableView.reloadData()
@@ -39,11 +39,9 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
         
-        let friend = friends[indexPath.section]
+        let friend = friends[indexPath.row]
 
-      let name = friend["username"] as! PFUser
-
-        cell.usernameLabel.text = name.username
+        cell.usernameLabel.text = friend["fullname"] as! String
   
     return cell
         
