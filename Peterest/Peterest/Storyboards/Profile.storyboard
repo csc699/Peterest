@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TNp-9J-Qnd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TNp-9J-Qnd">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Info"/>
                                 <connections>
-                                    <segue destination="5Ef-Sg-swT" kind="show" id="N3T-xH-iFm"/>
+                                    <segue destination="5Ef-Sg-swT" kind="presentation" id="HGB-qC-w8X"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ilovecats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-xz-5qh">
@@ -54,7 +54,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-sG-wKu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-sG-wKu">
                                 <rect key="frame" x="104" y="160" width="214" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -63,22 +63,31 @@
                         <viewLayoutGuide key="safeArea" id="eKV-I4-qH2"/>
                     </view>
                     <navigationItem key="navigationItem" id="lZi-kc-TKX"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="Dv9-xZ-f0i" id="htu-xV-P5d"/>
+                        <outlet property="imageView" destination="RUC-sG-wKu" id="SzC-dO-qwz"/>
+                        <outlet property="usernameLabel" destination="VLZ-xz-5qh" id="C2W-c5-lg4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojc-oV-beK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763.7681159420292" y="760.71428571428567"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile Edit View Controller-->
         <scene sceneID="EGJ-ev-uXI">
             <objects>
-                <viewController id="5Ef-Sg-swT" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="Peterest" sceneMemberID="viewController">
+                <viewController id="5Ef-Sg-swT" userLabel="Profile Edit View Controller" customClass="CameraProfileViewController" customModule="Peterest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pPw-fM-r3Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syx-he-aSb">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="syx-he-aSb">
                                 <rect key="frame" x="104" y="160" width="214" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DJX-1h-jIP" appends="YES" id="gmw-F1-vE8"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULS-fE-zKr">
                                 <rect key="frame" x="104" y="407" width="84" height="21"/>
@@ -94,13 +103,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-xJ-Wnj">
-                                <rect key="frame" x="104" y="431" width="114" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ilovecats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-9S-BjG">
+                                <rect key="frame" x="104" y="438" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Talk about yourself" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATi-2I-64e">
                                 <rect key="frame" x="104" y="513" width="141" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,14 +130,27 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="5Ef-Sg-swT" eventType="touchUpInside" id="yfI-sz-hZM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C4d-zL-Jmr"/>
                     </view>
                     <navigationItem key="navigationItem" id="UIW-6x-Xdt"/>
+                    <connections>
+                        <outlet property="bioField" destination="ATi-2I-64e" id="rZx-qv-IHP"/>
+                        <outlet property="imageView" destination="syx-he-aSb" id="a6H-7t-TtZ"/>
+                        <outlet property="usernameLabel" destination="EL4-9S-BjG" id="d1l-vy-33Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6d-hv-fQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DJX-1h-jIP">
+                    <connections>
+                        <action selector="onCameraButton:" destination="5Ef-Sg-swT" id="gOK-vl-VE4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2792.753623188406" y="760.71428571428567"/>
         </scene>
@@ -154,6 +176,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile-account" width="37.5" height="37.5"/>
+        <image name="profile-account" width="50" height="50"/>
+        <image name="profile_placeholder" width="980" height="980"/>
     </resources>
 </document>

@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var bioLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         let userName = PFUser.current()?.object(forKey: "username") as! String
+        
+        /*let userBio = PFUser.current()?.object(forKey: "bio") as! String*/
+        
+        usernameLabel.text = userName
+        //bioLabel.text = userBio
+        
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
