@@ -36,29 +36,32 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
         usernameLabel.text = userName
         imageView.af_setImage(withURL: url)
         bioField.text = userBio
-        
-        /*var userImageFile = [PFObject]()
-        
-        if (PFUser.current()?.object(forKey: "image") != nil){
-            userImageFile = PFUser.current()?.object(forKey: "image") as! PFFile
-            
-            userImageFile.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
-                self.imageView.image = UIImage(data:imageData! as Data)
-                
-            })
-        }*/
-        
 
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
-        let profile = PFObject(className: "User")
+        //gets the current users objectId
+        let userId = (PFUser.current()?.objectId)!
+        
+        //this will update the users bio
+        let query = PFQuery(className:"_User")
+        query.getObjectInBackground(withId: userId) { (object, error) -> Void in
+            if object != nil && error == nil {
+                print("I was updated!")
+                object!["userBio"] = self.bioField.text
+                object!.saveInBackground()
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                print(error)
+            }
+        }
+        
+        /* let profile = PFObject(className: "User")
         
         
         profile ["username"] = PFUser.current()!
-        profile ["userBio"] = bioField.text!
+       // profile ["userBio"] = bioField.text!
         
         
         let imageData = imageView.image!.pngData()
@@ -75,6 +78,8 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
             }
             
         }
+ */
+    
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
