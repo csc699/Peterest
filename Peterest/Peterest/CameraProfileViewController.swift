@@ -11,6 +11,8 @@ import AlamofireImage
 import Parse
 
 class CameraProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var user: PFObject!
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -21,12 +23,19 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //load user details
         let userName = PFUser.current()?.object(forKey: "username") as! String
-        //let userBio = PFUser.current()?.object(forKey: "bio") as! String
+        
+       let userImage = PFUser.current()?.object(forKey: "profileImage") as! PFFileObject
+        let urlString = userImage.url!
+        let url = URL(string: urlString)!
+        
+       let userBio = PFUser.current()?.object(forKey: "userBio") as! String
         
         usernameLabel.text = userName
-        //bioField.text = userBio
+        imageView.af_setImage(withURL: url)
+        bioField.text = userBio
         
         /*var userImageFile = [PFObject]()
         
@@ -45,22 +54,24 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
-        let profile = PFObject(className: "Profile")
+        let profile = PFObject(className: "User")
         
-        profile ["bio"] = bioField.text!
-        profile ["author"] = PFUser.current()!
+        
+        profile ["username"] = PFUser.current()!
+        profile ["userBio"] = bioField.text!
+        
         
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
-        profile ["image"] = file
+        profile ["profileImage"] = file
         
         profile.saveInBackground{ (success, error) in
             if success {
                 self.dismiss(animated: true, completion: nil)
                 print("saved!")
             } else {
-                print("error!")
+                print("error saving post!")
             }
             
         }
