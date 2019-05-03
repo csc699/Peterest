@@ -13,7 +13,7 @@ import Parse
 class CameraProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var user: PFObject!
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var usernameLabel: UILabel!
@@ -56,8 +56,9 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
                 object!["userBio"] = self.bioField.text
                 object!.saveInBackground()
                 self.dismiss(animated: true, completion: nil)
-            }
-            else {
+
+                
+                } else {
                 print(error)
             }
         }
@@ -121,5 +122,6 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

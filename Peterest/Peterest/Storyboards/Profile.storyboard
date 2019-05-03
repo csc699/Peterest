@@ -30,13 +30,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6O-Bm-4jv">
-                                <rect key="frame" x="337" y="774" width="57" height="30"/>
-                                <state key="normal" title="Edit Info"/>
-                                <connections>
-                                    <segue destination="5Ef-Sg-swT" kind="presentation" id="3Ob-7r-eDM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ilovecats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-xz-5qh">
                                 <rect key="frame" x="104" y="436" width="210" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -66,8 +59,6 @@
                             <constraint firstItem="ODG-uE-qm8" firstAttribute="leading" secondItem="eKV-I4-qH2" secondAttribute="leading" constant="104" id="K4X-so-OPv"/>
                             <constraint firstItem="N59-t4-cTs" firstAttribute="leading" secondItem="eKV-I4-qH2" secondAttribute="leading" constant="104" id="MdV-d1-gEa"/>
                             <constraint firstItem="RUC-sG-wKu" firstAttribute="top" secondItem="eKV-I4-qH2" secondAttribute="top" constant="73" id="QqE-Ql-Wvb"/>
-                            <constraint firstItem="l6O-Bm-4jv" firstAttribute="trailing" secondItem="jOP-Wz-xdE" secondAttribute="trailingMargin" id="W0Y-CM-q4q"/>
-                            <constraint firstItem="l6O-Bm-4jv" firstAttribute="top" secondItem="Dv9-xZ-f0i" secondAttribute="bottom" constant="247" id="ZuA-6F-0ut"/>
                             <constraint firstItem="eKV-I4-qH2" firstAttribute="trailing" secondItem="N59-t4-cTs" secondAttribute="trailing" constant="231" id="ffE-1n-kv1"/>
                             <constraint firstItem="eKV-I4-qH2" firstAttribute="trailing" secondItem="Dv9-xZ-f0i" secondAttribute="trailing" constant="64" id="jzK-vs-EcI"/>
                             <constraint firstItem="Dv9-xZ-f0i" firstAttribute="top" secondItem="N59-t4-cTs" secondAttribute="bottom" constant="8" id="k7n-px-kEc"/>
@@ -80,7 +71,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eKV-I4-qH2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lZi-kc-TKX"/>
+                    <navigationItem key="navigationItem" id="lZi-kc-TKX">
+                        <barButtonItem key="rightBarButtonItem" image="edit-icon" id="hVq-gx-6Ty">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="5Ef-Sg-swT" kind="presentation" id="Tzv-3W-X5P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bioLabel" destination="Dv9-xZ-f0i" id="htu-xV-P5d"/>
                         <outlet property="imageView" destination="RUC-sG-wKu" id="SzC-dO-qwz"/>
@@ -226,6 +224,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="edit-icon" width="30" height="27"/>
         <image name="editprofile" width="447" height="94"/>
         <image name="profile-account" width="50" height="50"/>
         <image name="profile_placeholder" width="980" height="980"/>

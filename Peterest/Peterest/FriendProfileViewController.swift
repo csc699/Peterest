@@ -26,7 +26,7 @@ class FriendProfileViewController: UIViewController {
         let userImage = user.object(forKey: "profileImage") as! PFFileObject
         let urlString = userImage.url!
         let url = URL(string: urlString)!
-        
+        bioLabel.text = user.object(forKey: "userBio") as! String
         usernameLabel.text = userName
         profilePic.af_setImage(withURL: url)
     }

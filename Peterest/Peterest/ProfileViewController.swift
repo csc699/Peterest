@@ -10,13 +10,15 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class ProfileViewController: UIViewController {
-    
+class ProfileViewController: UIViewController{
+  
+  
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var bioLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,8 @@ class ProfileViewController: UIViewController {
         
         imageView.af_setImage(withURL: url)
         
-        //bioLabel.text = userBio
+        
+        
         
         
         // Do any additional setup after loading the view.
@@ -51,5 +54,10 @@ class ProfileViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+  
+   
+    
     
 }
+   
+

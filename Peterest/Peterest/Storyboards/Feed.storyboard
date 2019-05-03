@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRL-Lt-fRG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRL-Lt-fRG">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,6 +38,10 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-x2-0Cb">
                                                     <rect key="frame" x="0.0" y="0.0" width="197" height="164"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="197" id="8kM-WG-Ng0"/>
+                                                        <constraint firstAttribute="height" constant="164" id="vb3-6u-EDq"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBd-r5-6bw">
                                                     <rect key="frame" x="0.0" y="172" width="197" height="24"/>
@@ -228,10 +232,10 @@
     </scenes>
     <resources>
         <image name="Peterest" width="279" height="92"/>
-        <image name="camera-upload" width="37.5" height="37.5"/>
+        <image name="camera-upload" width="50" height="50"/>
         <image name="close-icon" width="26" height="24"/>
-        <image name="feed" width="37.5" height="37.5"/>
+        <image name="feed" width="50" height="50"/>
         <image name="image_placeholder" width="493" height="391"/>
-        <image name="submit-50" width="75" height="75"/>
+        <image name="submit-50" width="50" height="50"/>
     </resources>
 </document>
