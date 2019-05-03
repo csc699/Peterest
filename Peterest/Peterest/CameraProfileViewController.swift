@@ -48,6 +48,11 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
         query.getObjectInBackground(withId: userId) { (object, error) -> Void in
             if object != nil && error == nil {
                 print("I was updated!")
+                //grabbing the changed image and converting to pffileobject
+                let imageData = self.imageView.image!.pngData()
+                let file = PFFileObject(data: imageData!)
+                object!["profileImage"] = file
+                //updating the userBio from the changed bioField input
                 object!["userBio"] = self.bioField.text
                 object!.saveInBackground()
                 self.dismiss(animated: true, completion: nil)
