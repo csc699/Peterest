@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aZ4-ka-ZRD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aZ4-ka-ZRD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -386,13 +386,13 @@
     </scenes>
     <resources>
         <image name="Peterest" width="279" height="92"/>
-        <image name="email" width="36" height="36"/>
-        <image name="feed" width="37.5" height="37.5"/>
-        <image name="friendslist" width="37.5" height="37.5"/>
-        <image name="fullname" width="75" height="75"/>
-        <image name="password" width="39" height="39"/>
-        <image name="profile-account" width="37.5" height="37.5"/>
-        <image name="username" width="75" height="75"/>
+        <image name="email" width="24" height="24"/>
+        <image name="feed" width="50" height="50"/>
+        <image name="friendslist" width="50" height="50"/>
+        <image name="fullname" width="50" height="50"/>
+        <image name="password" width="26" height="26"/>
+        <image name="profile-account" width="50" height="50"/>
+        <image name="username" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="b3h-Si-Ay3"/>

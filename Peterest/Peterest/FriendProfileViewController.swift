@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import Parse
 
-class SearchViewController: UIViewController {
+class FriendProfileViewController: UIViewController {
+    
+    var user: PFObject!
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     
     
-    @IBOutlet weak var friendSearchBar: UISearchBar!
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Do any additional setup after loading the view.        
+        let userName = user.object(forKey: "fullname") as! String
+        
+        usernameLabel.text = userName
     }
     
 
