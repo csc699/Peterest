@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFq-dE-brV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFq-dE-brV">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,6 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qjL-XZ-mHK">
                         <barButtonItem key="rightBarButtonItem" title="Add" image="add-50" id="XIx-MQ-4yi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="V4s-Bx-apr" kind="show" id="yql-C8-Nt2"/>
                             </connections>
@@ -105,12 +106,15 @@
         <scene sceneID="qig-Or-UjS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tFq-dE-brV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="friendslist" id="fNK-7M-Ka3"/>
+                    <tabBarItem key="tabBarItem" title="" image="friendslist" id="fNK-7M-Ka3">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-20"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9k1-nF-qdM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -123,7 +127,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add-50" width="50" height="50"/>
-        <image name="friendslist" width="50" height="50"/>
+        <image name="add-50" width="37.5" height="37.5"/>
+        <image name="friendslist" width="37.5" height="37.5"/>
     </resources>
 </document>

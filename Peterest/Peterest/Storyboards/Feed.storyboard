@@ -23,52 +23,53 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Fc-aa-Pgm">
-                                    <size key="itemSize" width="197" height="268"/>
+                                    <size key="itemSize" width="197" height="241"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeedCell" id="G7G-hD-oAn" customClass="FeedCell" customModule="Peterest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="268"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="241"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="197" height="268"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="197" height="241"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-x2-0Cb">
-                                                    <rect key="frame" x="26" y="20" width="144" height="144"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="144" id="CBe-3s-xqq"/>
-                                                        <constraint firstAttribute="height" constant="144" id="f6p-By-suu"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="164"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBd-r5-6bw">
-                                                    <rect key="frame" x="20" y="172" width="94" height="24"/>
+                                                    <rect key="frame" x="0.0" y="172" width="197" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, this is a caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98q-de-zm8">
-                                                    <rect key="frame" x="20" y="198" width="138" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="198" width="197" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="6w1-x2-0Cb" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" constant="26" id="8GV-qG-0Wj"/>
-                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="top" secondItem="6w1-x2-0Cb" secondAttribute="bottom" constant="14" id="8YH-Lv-s4e"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="tBd-r5-6bw" secondAttribute="trailing" constant="83" id="Cj3-3S-7AL"/>
-                                            <constraint firstItem="98q-de-zm8" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" constant="20" id="EX9-gd-qx6"/>
-                                            <constraint firstAttribute="trailing" secondItem="98q-de-zm8" secondAttribute="trailing" constant="39" id="Lf2-Sx-gow"/>
-                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" constant="20" id="PWZ-c9-MZs"/>
-                                            <constraint firstAttribute="trailing" secondItem="6w1-x2-0Cb" secondAttribute="trailing" constant="27" id="TRN-MI-rkP"/>
-                                            <constraint firstItem="6w1-x2-0Cb" firstAttribute="top" secondItem="G7G-hD-oAn" secondAttribute="top" constant="20" id="Ubh-sY-3bn"/>
-                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="top" secondItem="6w1-x2-0Cb" secondAttribute="bottom" constant="8" id="aLN-9H-g75"/>
-                                            <constraint firstItem="98q-de-zm8" firstAttribute="top" secondItem="tBd-r5-6bw" secondAttribute="bottom" constant="2" id="hFx-F2-AuA"/>
-                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="98q-de-zm8" secondAttribute="bottom" constant="49.5" id="ptq-7C-gSp"/>
+                                            <constraint firstAttribute="bottom" secondItem="98q-de-zm8" secondAttribute="bottom" constant="22" id="1De-e6-RWl"/>
+                                            <constraint firstItem="6w1-x2-0Cb" firstAttribute="top" secondItem="G7G-hD-oAn" secondAttribute="top" id="5OE-J7-BRp"/>
+                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="top" secondItem="6w1-x2-0Cb" secondAttribute="bottom" constant="8" id="7Di-PT-oAX"/>
+                                            <constraint firstAttribute="trailing" secondItem="6w1-x2-0Cb" secondAttribute="trailing" id="7du-dd-daB"/>
+                                            <constraint firstItem="98q-de-zm8" firstAttribute="top" secondItem="tBd-r5-6bw" secondAttribute="bottom" constant="2" id="AN6-vQ-eS1"/>
+                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" id="Air-Bc-2Io"/>
+                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="top" secondItem="6w1-x2-0Cb" secondAttribute="bottom" constant="8" id="BFl-bJ-F3o"/>
+                                            <constraint firstAttribute="trailing" secondItem="tBd-r5-6bw" secondAttribute="trailing" id="Gko-VG-Kal"/>
+                                            <constraint firstItem="6w1-x2-0Cb" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" id="Q8t-Vy-vAS"/>
+                                            <constraint firstItem="98q-de-zm8" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" id="Waq-rb-Iwu"/>
+                                            <constraint firstAttribute="trailing" secondItem="tBd-r5-6bw" secondAttribute="trailing" id="ah9-zb-ayL"/>
+                                            <constraint firstItem="98q-de-zm8" firstAttribute="top" secondItem="tBd-r5-6bw" secondAttribute="bottom" constant="2" id="feN-tX-7mF"/>
+                                            <constraint firstAttribute="trailing" secondItem="98q-de-zm8" secondAttribute="trailing" id="i1p-MA-7RH"/>
+                                            <constraint firstItem="tBd-r5-6bw" firstAttribute="leading" secondItem="G7G-hD-oAn" secondAttribute="leading" id="jWm-jp-j3r"/>
+                                            <constraint firstItem="98q-de-zm8" firstAttribute="top" secondItem="tBd-r5-6bw" secondAttribute="bottom" constant="2" id="lEg-RT-qx9"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="captionLabel" destination="98q-de-zm8" id="4L6-fX-gub"/>
@@ -84,15 +85,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="nlX-s8-ANt">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="4pQ-5g-teD">
+                            <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onLogoutButton:" destination="s7j-IC-hgq" id="t17-YG-AlH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="camera-upload" id="Dfa-bk-qHq">
-                            <connections>
-                                <segue destination="PBX-7s-Bq3" kind="presentation" id="cKc-2i-ELz"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="camera-upload" id="Dfa-bk-qHq">
+                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="PBX-7s-Bq3" kind="presentation" id="cKc-2i-ELz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="Peterest" width="5" id="S9U-FU-vPY">
+                                <inset key="imageInsets" minX="-14" minY="0.0" maxX="0.0" maxY="2"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="hbT-c4-rgj" id="8qb-ah-fJa"/>
@@ -147,11 +156,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="E2d-jH-iuE">
                         <barButtonItem key="leftBarButtonItem" image="close-icon" id="llL-mY-5fU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancelPost:" destination="aV1-Wp-De1" id="E1x-RQ-Ugc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="submit-50" id="XqZ-dC-Z9n">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-21" maxY="-6"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="submitPost:" destination="aV1-Wp-De1" id="aIO-Hi-vQ3"/>
                             </connections>
@@ -176,7 +188,9 @@
         <scene sceneID="8S1-ad-csA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wRL-Lt-fRG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="feed" id="Tt1-it-KnN"/>
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="Tt1-it-KnN">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-20"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dbg-12-HwN">
@@ -200,6 +214,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cXA-lz-NLa">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -212,6 +227,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Peterest" width="279" height="92"/>
         <image name="camera-upload" width="37.5" height="37.5"/>
         <image name="close-icon" width="26" height="24"/>
         <image name="feed" width="37.5" height="37.5"/>

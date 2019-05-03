@@ -18,22 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peterest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRX-YU-3Be">
-                                <rect key="frame" x="91" y="358" width="233" height="119"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Peterest" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-nV-yaH">
+                                <rect key="frame" x="68" y="402" width="279" height="92"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="6d4-5d-9XW"/>
-                                    <constraint firstAttribute="height" constant="119" id="aGD-VV-yrX"/>
+                                    <constraint firstAttribute="width" constant="279" id="SRO-dI-Yp3"/>
+                                    <constraint firstAttribute="height" constant="92" id="uba-Bc-mQE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="74"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sRX-YU-3Be" secondAttribute="trailing" constant="90" id="Ez1-Ex-keL"/>
-                            <constraint firstItem="sRX-YU-3Be" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="Fmc-I3-IA7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sRX-YU-3Be" secondAttribute="bottom" constant="385" id="ZB4-8k-OQq"/>
-                            <constraint firstItem="sRX-YU-3Be" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="raj-YA-y7t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xvu-nV-yaH" secondAttribute="trailing" constant="67" id="6Hd-F1-h49"/>
+                            <constraint firstItem="xvu-nV-yaH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="358" id="Zvx-2L-bHl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xvu-nV-yaH" secondAttribute="bottom" constant="368" id="fVW-tB-ndL"/>
+                            <constraint firstItem="xvu-nV-yaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="k7R-Gz-A3U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -43,4 +41,7 @@
             <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Peterest" width="279" height="92"/>
+    </resources>
 </document>
