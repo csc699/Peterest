@@ -32,6 +32,24 @@ class RegisterViewController: UIViewController {
         user["fullname"] = nameField.text
         user.username = usernameField.text
         user.email = emailField.text
+        // default user bio
+        user["userBio"] = "I am generic :) Edit me!"
+       
+        //grabs the profile placeholder from the assets folder, converts to bytes
+        //then is cast to a pffile object
+        let image = UIImage(named: "profile_placeholder.png")!
+        let imageData = image.pngData()!
+        let imageFile = PFFileObject(name:"profile_placeholder.png", data:imageData)
+        user["profileImage"] = imageFile
+        
+        
+     
+        
+        
+        
+        
+     
+        //user.saveInBackground()
         
         if(passwordField.text == confirmPasswordField.text){
         user.password = passwordField.text

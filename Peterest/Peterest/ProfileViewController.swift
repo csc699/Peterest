@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class ProfileViewController: UIViewController {
     
@@ -22,9 +23,17 @@ class ProfileViewController: UIViewController {
         
         let userName = PFUser.current()?.object(forKey: "username") as! String
         
-        /*let userBio = PFUser.current()?.object(forKey: "bio") as! String*/
+        let userBio = PFUser.current()?.object(forKey: "userBio") as! String
         
         usernameLabel.text = userName
+        bioLabel.text = userBio
+        
+        let userImage = PFUser.current()?.object(forKey: "profileImage") as! PFFileObject
+        let urlString = userImage.url!
+        let url = URL(string: urlString)!
+        
+        imageView.af_setImage(withURL: url)
+        
         //bioLabel.text = userBio
         
         
