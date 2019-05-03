@@ -23,8 +23,12 @@ class FriendProfileViewController: UIViewController {
         
         // Do any additional setup after loading the view.        
         let userName = user.object(forKey: "fullname") as! String
+        let userImage = user.object(forKey: "profileImage") as! PFFileObject
+        let urlString = userImage.url!
+        let url = URL(string: urlString)!
         
         usernameLabel.text = userName
+        profilePic.af_setImage(withURL: url)
     }
     
 
