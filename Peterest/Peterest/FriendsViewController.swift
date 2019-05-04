@@ -52,7 +52,9 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             let friend = friends[indexPath.row]
             cell.usernameLabel.text = friend["fullname"] as! String
-            friendArr.append(friend["fullname"] as! String)
+            if (friends.count > friendArr.count) {
+                friendArr.append(friend["fullname"] as! String)
+            }
         }
   
         return cell
