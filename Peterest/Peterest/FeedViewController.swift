@@ -31,8 +31,10 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
 
-    
-        // Do any additional setup after loading the view.
+        var layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 5.5, left: 5.5, bottom: 5.5, right: 5.5)
+        layout.minimumInteritemSpacing = 5.5
+        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20)/2, height: self.collectionView.frame.size.height/3.8)
     }
     
     override func viewDidAppear(_ animated: Bool) {
