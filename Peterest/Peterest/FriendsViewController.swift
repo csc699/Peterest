@@ -46,15 +46,18 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
+       
+        if friendArr.count < friends.count {
+            if !(friendArr.contains((friends[indexPath.row].object(forKey: "fullname") as! String))) {
+                let friend = friends[indexPath.row]
+                friendArr.append(friend["fullname"] as! String)
+            }
+        }
         
         if searching {
             cell.usernameLabel.text = searchFriend[indexPath.row]
         } else {
-            let friend = friends[indexPath.row]
-            cell.usernameLabel.text = friend["fullname"] as! String
-            if (friends.count > friendArr.count) {
-                friendArr.append(friend["fullname"] as! String)
-            }
+            cell.usernameLabel.text = friendArr[indexPath.row]
         }
   
         return cell
@@ -67,7 +70,20 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
-        let user = friends[indexPath.row]
+        let userSelected: String
+        if searching {
+            userSelected = searchFriend[indexPath.row]
+        } else {
+            userSelected = friendArr[indexPath.row]
+        }
+        var user: PFObject!
+        var i = 0
+        while i < friends.count {
+            if (userSelected == (friends[i].object(forKey: "fullname") as! String)) {
+                user = friends[i]
+            }
+            i += 1
+        }
         
         let friendProfileViewController = segue.destination as! FriendProfileViewController
         friendProfileViewController.user = user
