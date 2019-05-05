@@ -10,13 +10,11 @@ import UIKit
 import Parse
 import AlamofireImage
 
+
 class ProfileViewController: UIViewController{
   
-  
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var bioLabel: UILabel!
     
     
@@ -36,28 +34,32 @@ class ProfileViewController: UIViewController{
         
         imageView.af_setImage(withURL: url)
         
-        
-        
-        
-        
         // Do any additional setup after loading the view.
     }
     
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
+        if segue.identifier == "sendUpdateSegue" {
+            let vc : CameraProfileViewController = segue.destination as! CameraProfileViewController
+            vc.delegate = self
+        }
      }
-     */
-  
-   
     
     
 }
    
-
+extension ProfileViewController: UpdateDelegate {
+    func didUpdate(name: String, bio: String, image: UIImage) {
+        usernameLabel.text = name
+        bioLabel.text = bio
+        imageView.image = image
+    }
+    
+}

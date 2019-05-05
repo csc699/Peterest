@@ -75,7 +75,7 @@
                         <barButtonItem key="rightBarButtonItem" image="edit-icon" id="hVq-gx-6Ty">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="5Ef-Sg-swT" kind="presentation" id="Tzv-3W-X5P"/>
+                                <segue destination="5Ef-Sg-swT" kind="presentation" identifier="sendUpdateSegue" id="53J-nI-MVX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -10,34 +10,35 @@ import UIKit
 import AlamofireImage
 import Parse
 
+protocol UpdateDelegate {
+    func didUpdate (name: String, bio: String, image: UIImage)
+}
+
 class CameraProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var user: PFObject!
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var bioField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //load user details
         let userName = PFUser.current()?.object(forKey: "username") as! String
         
-       let userImage = PFUser.current()?.object(forKey: "profileImage") as! PFFileObject
+        let userImage = PFUser.current()?.object(forKey: "profileImage") as! PFFileObject
         let urlString = userImage.url!
         let url = URL(string: urlString)!
         
-       let userBio = PFUser.current()?.object(forKey: "userBio") as! String
+        let userBio = PFUser.current()?.object(forKey: "userBio") as! String
         
         usernameLabel.text = userName
         imageView.af_setImage(withURL: url)
         bioField.text = userBio
 
     }
+    
+    var delegate: UpdateDelegate?
     
     @IBAction func onSubmitButton(_ sender: Any) {
         //gets the current users objectId
@@ -55,10 +56,13 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
                 //updating the userBio from the changed bioField input
                 object!["userBio"] = self.bioField.text
                 object!.saveInBackground()
-                self.dismiss(animated: true, completion: nil)
-
+                if self.delegate != nil {
+                    self.delegate?.didUpdate(name: self.usernameLabel.text!, bio: self.bioField.text!, image: self.imageView.image!)
+                    //dismiss the model
+                    self.dismiss(animated: true, completion: nil)
+                }
                 
-                } else {
+            } else {
                 print(error)
             }
         }
