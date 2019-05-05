@@ -10,8 +10,11 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class SinglePostViewController: UIViewController {
+class SinglePostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var comments = [PFObject]()
+    var posts: PFObject!
+
     var image = UIImage()
     var username = ""
     var caption = ""
@@ -34,8 +37,25 @@ class SinglePostViewController: UIViewController {
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         imageView.af_setImage(withURL: url)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+    }
+    
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
+    
+        //test data that prints the current user logged in and a test comment
+        cell.usernameLabel.text = PFUser.current()!.username
+        cell.commentLabel.text = "I am a comment"
+        return cell
     }
     
     
