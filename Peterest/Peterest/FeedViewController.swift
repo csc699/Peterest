@@ -42,7 +42,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Posts")
-        query.includeKey("author")
+        query.includeKeys(["author", "comments", "comments.author"])
         
         query.limit = 20
         
@@ -94,15 +94,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let user = post["author"] as! PFUser
         let caption = post["caption"] as! String
         let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        
+
         //passing the values from collection view cell to single post view controller
         destinationVC.username = user.username!
         destinationVC.caption = caption
         destinationVC.imageFile = imageFile
-        
+        destinationVC.posts = [post]
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
