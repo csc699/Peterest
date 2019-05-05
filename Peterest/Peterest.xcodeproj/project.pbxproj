@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2629C3EA2267122600D42E08 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2629C3E92267122600D42E08 /* CameraViewController.swift */; };
 		262C974E2276A18700BF306F /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C974D2276A18700BF306F /* FriendsCell.swift */; };
+		2632033B227D7B380057A237 /* SinglePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632033A227D7B380057A237 /* SinglePostViewController.swift */; };
+		2632033D227D83310057A237 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632033C227D83310057A237 /* PostCell.swift */; };
+		2632033F227D84AC0057A237 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632033E227D84AC0057A237 /* CommentCell.swift */; };
 		2677978C227B684600DE08B5 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677978B227B684500DE08B5 /* PinterestLayout.swift */; };
 		269DD3CB22797B050057B976 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DD3CA22797B050057B976 /* FeedCell.swift */; };
 		26A12843225EB32B006F9CF0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12842225EB32B006F9CF0 /* RegisterViewController.swift */; };
@@ -56,6 +59,9 @@
 		260FA03B5522AA2CCCE74AEC /* Pods-Peterest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peterest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peterest/Pods-Peterest.debug.xcconfig"; sourceTree = "<group>"; };
 		2629C3E92267122600D42E08 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		262C974D2276A18700BF306F /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		2632033A227D7B380057A237 /* SinglePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostViewController.swift; sourceTree = "<group>"; };
+		2632033C227D83310057A237 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		2632033E227D84AC0057A237 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		2677978B227B684500DE08B5 /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		269DD3CA22797B050057B976 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		26A12842225EB32B006F9CF0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 				CC881978225C37C7003038ED /* Info.plist */,
 				2677978B227B684500DE08B5 /* PinterestLayout.swift */,
 				CC881975225C37C7003038ED /* LaunchScreen.storyboard */,
+				2632033C227D83310057A237 /* PostCell.swift */,
+				2632033E227D84AC0057A237 /* CommentCell.swift */,
+				2632033A227D7B380057A237 /* SinglePostViewController.swift */,
 				269DD3CA22797B050057B976 /* FeedCell.swift */,
 				262C974D2276A18700BF306F /* FriendsCell.swift */,
 				2629C3E92267122600D42E08 /* CameraViewController.swift */,
@@ -456,6 +465,7 @@
 				76EC1F33227AAF9300CB9EA2 /* CameraProfileViewController.swift in Sources */,
 				26A12843225EB32B006F9CF0 /* RegisterViewController.swift in Sources */,
 				CC336F73225C47F8006C63C7 /* ProfileViewController.swift in Sources */,
+				2632033B227D7B380057A237 /* SinglePostViewController.swift in Sources */,
 				269DD3CB22797B050057B976 /* FeedCell.swift in Sources */,
 				CC336F71225C47EB006C63C7 /* FeedViewController.swift in Sources */,
 				2677978C227B684600DE08B5 /* PinterestLayout.swift in Sources */,
@@ -463,6 +473,8 @@
 				CC88196D225C37C4003038ED /* AppDelegate.swift in Sources */,
 				262C974E2276A18700BF306F /* FriendsCell.swift in Sources */,
 				2629C3EA2267122600D42E08 /* CameraViewController.swift in Sources */,
+				2632033D227D83310057A237 /* PostCell.swift in Sources */,
+				2632033F227D84AC0057A237 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
