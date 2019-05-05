@@ -44,6 +44,10 @@ class ProfileViewController: UIViewController{
         if segue.identifier == "sendUpdateSegue" {
             let vc : CameraProfileViewController = segue.destination as! CameraProfileViewController
             vc.delegate = self
+            
+            vc.finalUsername = usernameLabel.text
+            vc.finalBio = bioLabel.text
+            vc.finalImage = imageView.image
         }
      }
     

@@ -20,9 +20,18 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var bioField: UITextField!
     
+    var finalImage: UIImage!
+    var finalUsername: String!
+    var finalBio: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageView.image = finalImage
+        usernameLabel.text = finalUsername
+        bioField.text = finalBio
+        
+        /*
         //load user details
         let userName = PFUser.current()?.object(forKey: "username") as! String
         
@@ -35,7 +44,7 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
         usernameLabel.text = userName
         imageView.af_setImage(withURL: url)
         bioField.text = userBio
-
+        */
     }
     
     var delegate: UpdateDelegate?
