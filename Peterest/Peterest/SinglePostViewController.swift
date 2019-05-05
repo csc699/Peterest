@@ -46,15 +46,16 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
-    
+        
         //test data that prints the current user logged in and a test comment
         cell.usernameLabel.text = PFUser.current()!.username
-        cell.commentLabel.text = "I am a comment"
+        cell.commentLabel.text = "This is so cute!"
+        
         return cell
     }
     
