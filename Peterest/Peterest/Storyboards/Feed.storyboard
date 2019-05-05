@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="53" id="k6Y-17-2nv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="53" id="k6Y-17-2nv" userLabel="CommentCell">
                                         <rect key="frame" x="0.0" y="28" width="414" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k6Y-17-2nv" id="NQR-y4-Qt8">
@@ -76,7 +76,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="rci-2i-w9T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="rci-2i-w9T" userLabel="AddCommentCell">
                                         <rect key="frame" x="0.0" y="81" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rci-2i-w9T" id="7oA-J9-Fub">
@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="captionLabel" destination="V2N-tO-oAW" id="qkR-gg-BX0"/>
                         <outlet property="imageView" destination="MeV-jb-Q6c" id="Iq4-7C-VC6"/>
+                        <outlet property="tableView" destination="9F9-l3-e5M" id="V5D-9k-lAf"/>
                         <outlet property="usernameLabel" destination="wAl-b2-h6N" id="dPs-a6-9h6"/>
                     </connections>
                 </viewController>

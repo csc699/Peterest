@@ -10,9 +10,6 @@
 		2629C3EA2267122600D42E08 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2629C3E92267122600D42E08 /* CameraViewController.swift */; };
 		262C974E2276A18700BF306F /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C974D2276A18700BF306F /* FriendsCell.swift */; };
 		2632033B227D7B380057A237 /* SinglePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632033A227D7B380057A237 /* SinglePostViewController.swift */; };
-		2632033D227D83310057A237 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632033C227D83310057A237 /* PostCell.swift */; };
-		2632033F227D84AC0057A237 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632033E227D84AC0057A237 /* CommentCell.swift */; };
-		2677978C227B684600DE08B5 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677978B227B684500DE08B5 /* PinterestLayout.swift */; };
 		269DD3CB22797B050057B976 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DD3CA22797B050057B976 /* FeedCell.swift */; };
 		26A12843225EB32B006F9CF0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A12842225EB32B006F9CF0 /* RegisterViewController.swift */; };
 		4C68C9D4E694B43F57D023F2 /* Pods_Peterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32211E8BE11966F879743F03 /* Pods_Peterest.framework */; };
@@ -28,7 +25,6 @@
 		CC336F7A225C4ED5006C63C7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC336F79225C4ED5006C63C7 /* Profile.storyboard */; };
 		CC336F7C225C4EE9006C63C7 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC336F7B225C4EE9006C63C7 /* Friends.storyboard */; };
 		CC88196D225C37C4003038ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88196C225C37C4003038ED /* AppDelegate.swift */; };
-		CC88196F225C37C4003038ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88196E225C37C4003038ED /* ViewController.swift */; };
 		CC881972225C37C4003038ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC881970225C37C4003038ED /* Main.storyboard */; };
 		CC881974225C37C7003038ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC881973225C37C7003038ED /* Assets.xcassets */; };
 		CC881977225C37C7003038ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC881975225C37C7003038ED /* LaunchScreen.storyboard */; };
@@ -60,9 +56,6 @@
 		2629C3E92267122600D42E08 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		262C974D2276A18700BF306F /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		2632033A227D7B380057A237 /* SinglePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostViewController.swift; sourceTree = "<group>"; };
-		2632033C227D83310057A237 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		2632033E227D84AC0057A237 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		2677978B227B684500DE08B5 /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		269DD3CA22797B050057B976 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		26A12842225EB32B006F9CF0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		32211E8BE11966F879743F03 /* Pods_Peterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +73,6 @@
 		CC336F7B225C4EE9006C63C7 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		CC881969225C37C4003038ED /* Peterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC88196C225C37C4003038ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC88196E225C37C4003038ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC881971225C37C4003038ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC881973225C37C7003038ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC881976225C37C7003038ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +122,7 @@
 				CC336F77225C4E9D006C63C7 /* Feed.storyboard */,
 				CC336F79225C4ED5006C63C7 /* Profile.storyboard */,
 				CC336F7B225C4EE9006C63C7 /* Friends.storyboard */,
+				CC881975225C37C7003038ED /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -161,13 +154,8 @@
 			children = (
 				CC336F76225C4E80006C63C7 /* Storyboards */,
 				CC88196C225C37C4003038ED /* AppDelegate.swift */,
-				CC88196E225C37C4003038ED /* ViewController.swift */,
 				CC881973225C37C7003038ED /* Assets.xcassets */,
 				CC881978225C37C7003038ED /* Info.plist */,
-				2677978B227B684500DE08B5 /* PinterestLayout.swift */,
-				CC881975225C37C7003038ED /* LaunchScreen.storyboard */,
-				2632033C227D83310057A237 /* PostCell.swift */,
-				2632033E227D84AC0057A237 /* CommentCell.swift */,
 				2632033A227D7B380057A237 /* SinglePostViewController.swift */,
 				269DD3CA22797B050057B976 /* FeedCell.swift */,
 				262C974D2276A18700BF306F /* FriendsCell.swift */,
@@ -460,7 +448,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC336F6F225C47DE006C63C7 /* LoginViewController.swift in Sources */,
-				CC88196F225C37C4003038ED /* ViewController.swift in Sources */,
 				6EE6228A22644D8C003FB298 /* FriendProfileViewController.swift in Sources */,
 				76EC1F33227AAF9300CB9EA2 /* CameraProfileViewController.swift in Sources */,
 				26A12843225EB32B006F9CF0 /* RegisterViewController.swift in Sources */,
@@ -468,13 +455,10 @@
 				2632033B227D7B380057A237 /* SinglePostViewController.swift in Sources */,
 				269DD3CB22797B050057B976 /* FeedCell.swift in Sources */,
 				CC336F71225C47EB006C63C7 /* FeedViewController.swift in Sources */,
-				2677978C227B684600DE08B5 /* PinterestLayout.swift in Sources */,
 				CC336F75225C4808006C63C7 /* FriendsViewController.swift in Sources */,
 				CC88196D225C37C4003038ED /* AppDelegate.swift in Sources */,
 				262C974E2276A18700BF306F /* FriendsCell.swift in Sources */,
 				2629C3EA2267122600D42E08 /* CameraViewController.swift in Sources */,
-				2632033D227D83310057A237 /* PostCell.swift in Sources */,
-				2632033F227D84AC0057A237 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
