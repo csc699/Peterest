@@ -8,19 +8,31 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class SinglePostViewController: UIViewController {
-
-    var posts: PFObject!
     
-    @IBOutlet weak var profileImageView: UIImageView!
+    var image = UIImage()
+    var username = ""
+    var caption = ""
+    var imageFile: PFFileObject!
+    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
+
+        usernameLabel.text = username
+        captionLabel.text = caption
+       
+        //assignment of the image file and conversion to url to set the image with alamofireimage
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        imageView.af_setImage(withURL: url)
+
         // Do any additional setup after loading the view.
     }
     

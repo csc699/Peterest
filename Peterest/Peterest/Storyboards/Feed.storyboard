@@ -13,7 +13,7 @@
         <!--Single Post View Controller-->
         <scene sceneID="ytx-SK-skU">
             <objects>
-                <viewController id="8qo-eF-UDP" customClass="SinglePostViewController" customModule="Peterest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SinglePostViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8qo-eF-UDP" customClass="SinglePostViewController" customModule="Peterest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p4b-PV-W5A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="captionLabel" destination="V2N-tO-oAW" id="qkR-gg-BX0"/>
-                        <outlet property="profileImageView" destination="MeV-jb-Q6c" id="Iq4-7C-VC6"/>
+                        <outlet property="imageView" destination="MeV-jb-Q6c" id="Iq4-7C-VC6"/>
                         <outlet property="usernameLabel" destination="wAl-b2-h6N" id="dPs-a6-9h6"/>
                     </connections>
                 </viewController>
@@ -177,7 +177,6 @@
                                             <outlet property="captionLabel" destination="98q-de-zm8" id="4L6-fX-gub"/>
                                             <outlet property="imageView" destination="6w1-x2-0Cb" id="hLm-jc-hhN"/>
                                             <outlet property="usernameLabel" destination="tBd-r5-6bw" id="hen-ak-cMX"/>
-                                            <segue destination="8qo-eF-UDP" kind="show" id="Sa7-Nh-VuH"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -83,6 +83,26 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor.gray.cgColor
         cell?.layer.borderWidth = 2
+        
+        //this is the segue for the feed storyboard to go to the single post view controller
+        let feedStoryboard:UIStoryboard = UIStoryboard(name: "Feed", bundle: nil)
+        let destinationVC = feedStoryboard.instantiateViewController(withIdentifier: "SinglePostViewController") as! SinglePostViewController
+        
+        //receiving the users posts in database
+        let post = posts[indexPath.row]
+        let user = post["author"] as! PFUser
+        let caption = post["caption"] as! String
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        
+        //passing the values from collection view cell to single post view controller
+        destinationVC.username = user.username!
+        destinationVC.caption = caption
+        destinationVC.imageFile = imageFile
+        
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -91,19 +111,20 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell?.layer.borderWidth = 0.5
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
         
-        let singlePostViewController = segue.destination as! SinglePostViewController
-        singlePostViewController.posts = user
+        let singlePostVC = segue.destination as! SinglePostViewController
+        singlePostVC.usernameLabel.text = user.username
                                         
         
         collectionView.deselectItem(at: indexPath, animated: true)
     }
+ */
 }
     
 
