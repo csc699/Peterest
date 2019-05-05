@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //load user data
         let userName = PFUser.current()?.object(forKey: "username") as! String
         
         let userBio = PFUser.current()?.object(forKey: "userBio") as! String
@@ -45,6 +46,7 @@ class ProfileViewController: UIViewController{
             let vc : CameraProfileViewController = segue.destination as! CameraProfileViewController
             vc.delegate = self
             
+            //passes current data to profile edit VC
             vc.finalUsername = usernameLabel.text
             vc.finalBio = bioLabel.text
             vc.finalImage = imageView.image
@@ -55,6 +57,7 @@ class ProfileViewController: UIViewController{
 }
    
 extension ProfileViewController: UpdateDelegate {
+    //Gets updates from profile edit VC
     func didUpdate(name: String, bio: String, image: UIImage) {
         usernameLabel.text = name
         bioLabel.text = bio

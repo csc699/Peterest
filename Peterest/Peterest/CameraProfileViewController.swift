@@ -27,24 +27,11 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //load user details
         imageView.image = finalImage
         usernameLabel.text = finalUsername
         bioField.text = finalBio
         
-        /*
-        //load user details
-        let userName = PFUser.current()?.object(forKey: "username") as! String
-        
-        let userImage = PFUser.current()?.object(forKey: "profileImage") as! PFFileObject
-        let urlString = userImage.url!
-        let url = URL(string: urlString)!
-        
-        let userBio = PFUser.current()?.object(forKey: "userBio") as! String
-        
-        usernameLabel.text = userName
-        imageView.af_setImage(withURL: url)
-        bioField.text = userBio
-        */
     }
     
     var delegate: UpdateDelegate?
@@ -66,6 +53,7 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
                 object!["userBio"] = self.bioField.text
                 object!.saveInBackground()
                 if self.delegate != nil {
+                    //this updates profile VC
                     self.delegate?.didUpdate(name: self.usernameLabel.text!, bio: self.bioField.text!, image: self.imageView.image!)
                     //dismiss the model
                     self.dismiss(animated: true, completion: nil)
@@ -75,30 +63,6 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
                 print(error)
             }
         }
-        
-        /* let profile = PFObject(className: "User")
-        
-        
-        profile ["username"] = PFUser.current()!
-       // profile ["userBio"] = bioField.text!
-        
-        
-        let imageData = imageView.image!.pngData()
-        let file = PFFileObject(data: imageData!)
-        
-        profile ["profileImage"] = file
-        
-        profile.saveInBackground{ (success, error) in
-            if success {
-                self.dismiss(animated: true, completion: nil)
-                print("saved!")
-            } else {
-                print("error saving post!")
-            }
-            
-        }
- */
-    
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
