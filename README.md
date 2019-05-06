@@ -30,11 +30,11 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 - [x] [Sign up, login] 
 - [x] [Main page with posts]
-- [ ] [Click on a picture to see comments]
-- [ ] [Submit a comment]
-- [ ] [Profile page, user can edit name, password, and email information] 
-- [ ] [Friend list] 
-- [ ] [Search for friend to add]
+- [x] [Click on a picture to see comments]
+- [x] [Submit a comment]
+- [x] [Profile page, user can edit name, password, and email information] 
+- [x] [Friend list] 
+- [x] [Search for friend to add]
 
 
 **Optional Nice-to-have Stories**
