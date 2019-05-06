@@ -15,7 +15,7 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
     
     var comments = [PFObject]()
     
-    var posts = [PFObject]()
+    var posts: PFObject!
 
     var image = UIImage()
     var username = ""
@@ -78,11 +78,11 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
         selectedPost.add(comment, forKey: "comments")
          
          selectedPost.saveInBackground { (success, error) in
-         if success {
-         print("Comment saved")
-         } else {
-         print("Error saving comment")
-         }
+             if success {
+                print("Comment saved")
+             } else {
+                print("Error saving comment")
+             }
          }
         
         tableView.reloadData()
@@ -94,23 +94,18 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.section]
-        
-        //creates our first comment in parse database
-        let comment = (post["comments"] as? [PFObject]) ?? []
-
+        //comment bar shows
         if indexPath.row <= comments.count + 1 {
             showsCommentBar = true
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
             
-            selectedPost = post
+            selectedPost = posts
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let post = posts[section]
-        let comment = (post["comments"] as? [PFObject]) ?? []
+        let comment = (posts["comments"] as? [PFObject]) ?? []
         
         return comment.count + 1
     }
@@ -122,22 +117,16 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
-        
-        //test data that prints the current user logged in and a test comment
-        //cell.usernameLabel.text = PFUser.current()!.username
-        //cell.commentLabel.text = "This is so cute!"
-        
-        let post = posts[indexPath.section]
-        let comments = (post["comments"] as? [PFObject]) ?? []
+        let comments = (posts["comments"] as? [PFObject]) ?? []
 
        
-        if indexPath.row == 0 && comments.count >= 1 {
+        if indexPath.row < comments.count {
         //grabs the actual values of comments in parse and displays to storyboard
-        let comment = comments[indexPath.row]
-        cell.commentLabel.text = comment["text"] as? String
-        let user = comment["author"] as! PFUser
-        cell.usernameLabel.text = user.username
-        return cell
+            let comment = comments[indexPath.row]
+            cell.commentLabel.text = comment["text"] as? String
+            let user = comment["author"] as! PFUser
+            cell.usernameLabel.text = user.username
+            return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
             return cell

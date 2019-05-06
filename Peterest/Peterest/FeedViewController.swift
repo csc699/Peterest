@@ -99,7 +99,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         destinationVC.username = user.username!
         destinationVC.caption = caption
         destinationVC.imageFile = imageFile
-        destinationVC.posts = [post]
+        destinationVC.posts = post
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
