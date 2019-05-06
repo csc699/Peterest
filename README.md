@@ -30,11 +30,11 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 - [x] [Sign up, login] 
 - [x] [Main page with posts]
-- [ ] [Click on a picture to see comments]
-- [ ] [Submit a comment]
-- [ ] [Profile page, user can edit name, password, and email information] 
-- [ ] [Friend list] 
-- [ ] [Search for friend to add]
+- [x] [Click on a picture to see comments]
+- [x] [Submit a comment]
+- [x] [Profile page, user can edit name, password, and email information] 
+- [x] [Friend list] 
+- [x] [Search for friend to add]
 
 
 **Optional Nice-to-have Stories**
@@ -50,15 +50,15 @@ Posting photos of an individual's pets and share them with others. Could be used
 
 * Login
 * Register - User signs up or logs into their account
-  * Upon downloading of the application, the user is prompted to sign up or log in to gain access.
-  * Upon reopening of the application, the user stays logged in.
+* Upon downloading of the application, the user is prompted to sign up or log in to gain access.
+* Upon reopening of the application, the user stays logged in.
 * Profile Screen
-  * Allows user to upload a photo and fill/edit in information.
+* Allows user to upload a photo and fill/edit in information.
 * Post Screen
-  * Allows user to view photos that other users have upload.
-  * Allows user to see comment when photo is click and add comment.
+* Allows user to view photos that other users have upload.
+* Allows user to see comment when photo is click and add comment.
 * Friend Screen
-  * Allows user to add friends and view their profile.
+* Allows user to add friends and view their profile.
 
 ### 3. Navigation
 
@@ -133,17 +133,17 @@ Optional:
 **Network Request Outline**
 
 * Home Feed Screen
-	* (Read/GET) Query all posts recently updated
-	* (Delete) Delete existing like
-	* (Create/POST) Create a new comment on a post
-	* (Delete) Delete existing comment
+* (Read/GET) Query all posts recently updated
+* (Delete) Delete existing like
+* (Create/POST) Create a new comment on a post
+* (Delete) Delete existing comment
 * Create Post Screen
-	* (Create/POST) Create a new post object
+* (Create/POST) Create a new post object
 * Profile Screen
-	* (Read/GET) Query logged in user object
-	* (Update/PUT) Update user profile image
+* (Read/GET) Query logged in user object
+* (Update/PUT) Update user profile image
 * Friend Search Screen
-	* (Read/GET) Query all user by name search
+* (Read/GET) Query all user by name search
 
 **Parse Networking Methods**
 
@@ -162,12 +162,12 @@ let query = PFQuery(className: "Post")
 query.includeKey(["author"])
 query.limit = 20
 query.findObjectsInBackground { (posts, error) in
-    if posts != nil {
-    	self.posts = posts!
-    	self.tableView.reloadData()
-    }
+if posts != nil {
+self.posts = posts!
+self.tableView.reloadData()
+}
 }
 ```
 **Updated Gif of Work in Progress**
 
-<img src='http://g.recordit.co/BhRmxzX5kI.gif' title='Video Walkthrough' width=300 alt='Video Walkthrough' />
+<img src='http://g.recordit.co/npscdBHqwf.gif' title='Video Walkthrough' width=300 alt='Video Walkthrough' />
