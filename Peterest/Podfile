@@ -10,6 +10,7 @@ target 'Peterest' do
   pod "Alamofire"
   pod "AlamofireImage"
   pod "MessageInputBar"
+  pod "IQKeyboardManagerSwift", '6.3.0'
 
   target 'PeterestTests' do
     inherit! :search_paths

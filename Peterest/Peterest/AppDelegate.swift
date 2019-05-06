@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //this is used for the register form to not have the input fields covered
+        IQKeyboardManager.shared.enable = true
         // Override point for customization after application launch.
         
         Parse.initialize(
