@@ -10,59 +10,58 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class CameraProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+protocol UpdateDelegate {
+    func didUpdate (name: String, bio: String, image: UIImage)
+}
 
+class CameraProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var bioField: UITextField!
+    
+    var finalImage: UIImage!
+    var finalUsername: String!
+    var finalBio: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //load user details
-        let userName = PFUser.current()?.object(forKey: "username") as! String
-        //let userBio = PFUser.current()?.object(forKey: "bio") as! String
+        imageView.image = finalImage
+        usernameLabel.text = finalUsername
+        bioField.text = finalBio
         
-        usernameLabel.text = userName
-        //bioField.text = userBio
-        
-        /*var userImageFile = [PFObject]()
-        
-        if (PFUser.current()?.object(forKey: "image") != nil){
-            userImageFile = PFUser.current()?.object(forKey: "image") as! PFFile
-            
-            userImageFile.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
-                self.imageView.image = UIImage(data:imageData! as Data)
-                
-            })
-        }*/
-        
-
-        
-        // Do any additional setup after loading the view.
     }
     
+    var delegate: UpdateDelegate?
+    
     @IBAction func onSubmitButton(_ sender: Any) {
-        let profile = PFObject(className: "Profile")
+        //gets the current users objectId
+        let userId = (PFUser.current()?.objectId)!
         
-        profile ["bio"] = bioField.text!
-        profile ["author"] = PFUser.current()!
-        
-        let imageData = imageView.image!.pngData()
-        let file = PFFileObject(data: imageData!)
-        
-        profile ["image"] = file
-        
-        profile.saveInBackground{ (success, error) in
-            if success {
-                self.dismiss(animated: true, completion: nil)
-                print("saved!")
+        //this will update the users bio
+        let query = PFQuery(className:"_User")
+        query.getObjectInBackground(withId: userId) { (object, error) -> Void in
+            if object != nil && error == nil {
+                print("I was updated!")
+                //grabbing the changed image and converting to pffileobject
+                let imageData = self.imageView.image!.pngData()
+                let file = PFFileObject(data: imageData!)
+                object!["profileImage"] = file
+                //updating the userBio from the changed bioField input
+                object!["userBio"] = self.bioField.text
+                object!.saveInBackground()
+                if self.delegate != nil {
+                    //this updates profile VC
+                    self.delegate?.didUpdate(name: self.usernameLabel.text!, bio: self.bioField.text!, image: self.imageView.image!)
+                    //dismiss the model
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
             } else {
-                print("error!")
+                print(error)
             }
-            
         }
     }
     
@@ -100,5 +99,6 @@ class CameraProfileViewController: UIViewController, UIImagePickerControllerDele
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

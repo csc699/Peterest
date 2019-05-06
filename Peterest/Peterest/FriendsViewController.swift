@@ -12,8 +12,12 @@ import Parse
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var friends = [PFObject]()
-
     
+    var friendArr = [String]()
+    var searchFriend = [String]()
+    var searching = false
+
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,18 +37,58 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
+        if searching {
+            return searchFriend.count
+        } else {
+            return friends.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! FriendsCell
+       
+        if friendArr.count < friends.count {
+            if !(friendArr.contains((friends[indexPath.row].object(forKey: "fullname") as! String))) {
+                let friend = friends[indexPath.row]
+                friendArr.append(friend["fullname"] as! String)
+            }
+        }
         
-        let friend = friends[indexPath.row]
-
-        cell.usernameLabel.text = friend["fullname"] as! String
+        if searching {
+            cell.usernameLabel.text = searchFriend[indexPath.row]
+        } else {
+            cell.usernameLabel.text = friendArr[indexPath.row]
+        }
   
-    return cell
+        return cell
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let userSelected: String
+        if searching {
+            userSelected = searchFriend[indexPath.row]
+        } else {
+            userSelected = friendArr[indexPath.row]
+        }
+        var user: PFObject!
+        var i = 0
+        while i < friends.count {
+            if (userSelected == (friends[i].object(forKey: "fullname") as! String)) {
+                user = friends[i]
+            }
+            i += 1
+        }
+        
+        let friendProfileViewController = segue.destination as! FriendProfileViewController
+        friendProfileViewController.user = user
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     override func viewDidLoad() {
@@ -56,17 +100,13 @@ let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell") as! Frie
         // Do any additional setup after loading the view.
         
     }
-    
-  
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension FriendsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchFriend = friendArr.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searching = true
+        tableView.reloadData()
     }
-    */
-
 }
