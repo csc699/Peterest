@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
             print("no")
+
         }))
         
         self.present(alert, animated: true, completion: nil)

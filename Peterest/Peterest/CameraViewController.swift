@@ -12,6 +12,11 @@ import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var captionField: UITextField!
+    
+    
     @IBAction func cancelPost(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -23,26 +28,48 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["author"] = PFUser.current()!
         post["caption"] = captionField.text!
         
+        let imagePlaceholder = UIImage(named: "image_placeholder")
+        if (imageView.image == imagePlaceholder) {
+            print("you need a real image")
+            createAlert(title: "You need to select an image", message: "Try again?")
+            } else {
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
         post["image"] = file
-        
         post.saveInBackground { (success, error) in
-            if success {
-                print("saved")
-                self.dismiss(animated: true, completion: nil)
-            } else {
-                print("error in saving post")
+                if success {
+                    print("saved")
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print("error in saving post")
+                }
             }
         }
+    
+        
     }
     
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var captionField: UITextField!
-    
+    //creates an alert when the user trys to submit post without photo
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        //creation of button
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("yes")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("no")
+            //closes the window because user chose no
+            self.cancelPost(PFUser.current())
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()

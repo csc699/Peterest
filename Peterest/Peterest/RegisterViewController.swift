@@ -90,6 +90,9 @@ class RegisterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         print("no")
+        //go back to login screen
+        self.performSegue(withIdentifier: "backtoLoginSegue", sender: nil)
+
         }))
     
     self.present(alert, animated: true, completion: nil)
