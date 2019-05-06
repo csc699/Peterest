@@ -170,4 +170,4 @@ query.findObjectsInBackground { (posts, error) in
 ```
 **Updated Gif of Work in Progress**
 
-<img src='http://g.recordit.co/BhRmxzX5kI.gif' title='Video Walkthrough' width=300 alt='Video Walkthrough' />
+<img src='http://g.recordit.co/npscdBHqwf.gif' title='Video Walkthrough' width=300 alt='Video Walkthrough' />
