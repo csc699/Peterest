@@ -9,8 +9,9 @@
 import UIKit
 import Parse
 import AlamofireImage
+import MessageInputBar
 
-class SinglePostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SinglePostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate{
     
     var comments = [PFObject]()
     
@@ -20,6 +21,12 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
     var username = ""
     var caption = ""
     var imageFile: PFFileObject!
+    
+    var selectedPost: PFObject!
+    
+    //variables for message input bar
+    let commentBar = MessageInputBar()
+    var showsCommentBar = false
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -33,6 +40,11 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
 
         usernameLabel.text = username
         captionLabel.text = caption
+        
+        //adds the style of the commentBar
+        commentBar.inputTextView.placeholder = "Add a comment..."
+        commentBar.sendButton.title = "Post"
+        commentBar.delegate = self
        
         //assignment of the image file and conversion to url to set the image with alamofireimage
         let urlString = imageFile.url!
@@ -42,35 +54,65 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         tableView.dataSource = self
 
+        tableView.keyboardDismissMode = .interactive
+        
         // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.row]
-        
-        //creates our first comment in parse database
+    override var inputAccessoryView: UIView? {
+        return commentBar
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return showsCommentBar
+    }
+    
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        //create the comment
         let comment = PFObject(className: "Comments")
-        comment["text"] = "Why you no working?"
-        comment["post"] = post
+        comment["text"] = text
+        comment["post"] = selectedPost
         comment["author"] = PFUser.current()!
         
         //click on comment cell to add comment
-        /*post.add(comment, forKey: "comments")
+        selectedPost.add(comment, forKey: "comments")
+         
+         selectedPost.saveInBackground { (success, error) in
+         if success {
+         print("Comment saved")
+         } else {
+         print("Error saving comment")
+         }
+         }
         
-        post.saveInBackground { (success, error) in
-            if success {
-                print("Comment saved")
-            } else {
-                print("Error saving comment")
-            }
-        }*/
+        tableView.reloadData()
+        
+        //clear and dismiss the input bar
+        showsCommentBar = false
+        becomeFirstResponder()
+        commentBar.inputTextView.resignFirstResponder()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.section]
+        
+        //creates our first comment in parse database
+        let comment = (post["comments"] as? [PFObject]) ?? []
+
+        if indexPath.row <= comments.count + 1 {
+            showsCommentBar = true
+            becomeFirstResponder()
+            commentBar.inputTextView.becomeFirstResponder()
+            
+            selectedPost = post
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let post = posts[section]
         let comment = (post["comments"] as? [PFObject]) ?? []
         
-        return comment.count
+        return comment.count + 1
     }
     
     
@@ -88,14 +130,20 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
         let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
 
+       
+        if indexPath.row == 0 && comments.count >= 1 {
         //grabs the actual values of comments in parse and displays to storyboard
         let comment = comments[indexPath.row]
         cell.commentLabel.text = comment["text"] as? String
         let user = comment["author"] as! PFUser
         cell.usernameLabel.text = user.username
         return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+            return cell
+
+        }
     }
-    
     
 
     /*

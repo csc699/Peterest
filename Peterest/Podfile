@@ -9,6 +9,7 @@ target 'Peterest' do
   pod "Parse"
   pod "Alamofire"
   pod "AlamofireImage"
+  pod "MessageInputBar"
 
   target 'PeterestTests' do
     inherit! :search_paths
