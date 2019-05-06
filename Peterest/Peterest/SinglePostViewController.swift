@@ -13,7 +13,7 @@ import MessageInputBar
 
 class SinglePostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageInputBarDelegate{
     
-    var comments = [PFObject]()
+    //var comments = [PFObject]()
     
     var posts: PFObject!
 
@@ -94,8 +94,9 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = (posts["comments"] as? [PFObject]) ?? []
         //comment bar shows
-        if indexPath.row <= comments.count + 1 {
+        if indexPath.row == comment.count {
             showsCommentBar = true
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
@@ -110,11 +111,11 @@ class SinglePostViewController: UIViewController, UITableViewDataSource, UITable
         return comment.count + 1
     }
     
-    
+    /*
     func numberOfSections(in tableView: UITableView) -> Int {
         return comments.count + 1
     }
-    
+    */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
         let comments = (posts["comments"] as? [PFObject]) ?? []
